@@ -1,0 +1,65 @@
+#include <stdio.h>
+
+void eleicao()
+{
+    int cand1 = 0, cand2 = 0, cand3 = 0, cand4 = 0, nulo = 0, branco = 0, voto;
+
+    printf("Vote em seu candidato:\n");
+    printf("1 - Lula\n");
+    printf("2 - Flavio Bolsonaro\n");
+    printf("3 - Romeu Zema\n");
+    printf("4 - Renan Santos\n");
+    printf("5 - Voto Nulo\n");
+    printf("6 - Voto em Branco\n");
+    printf("0 - Finalizar\n");
+
+    scanf("%d", &voto);
+
+    while (voto != 0)
+    {
+        switch (voto)
+        {
+            case 1:
+                cand1++;
+                break;
+
+            case 2:
+                cand2++;
+                break;
+
+            case 3:
+                cand3++;
+                break;
+
+            case 4:
+                cand4++;
+                break;
+
+            case 5:
+                nulo++;
+                break;
+
+            case 6:
+                branco++;
+                break;
+
+            default:
+                printf("Voto invalido!\n");
+        }
+
+        scanf("%d", &voto);
+    }
+
+    printf("Lula: %d votos\n", cand1);
+    printf("Flavio Bolsonaro: %d votos\n", cand2);
+    printf("Romeu Zema: %d votos\n", cand3);
+    printf("Renan Santos: %d votos\n", cand4);
+    printf("Votos nulos: %d votos\n", nulo);
+    printf("Votos em branco: %d votos\n", branco);
+}
+
+int main()
+{
+    eleicao();
+    return 0;
+}
