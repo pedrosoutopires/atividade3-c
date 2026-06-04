@@ -21,10 +21,6 @@ int a = 0, b = 0, c = 0, d = 0, numero;
 
         else if (numero > 75 && numero <= 100)
             d++;
-
-        else
-            d + 0;
-
     }
 
     printf("NUMEROS ENTRE 0 E 25: %d", a);
