@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main(){
+
+int a = 0, b = 0, c = 0, d = 0, numero;
+
+    printf("Digite o numero: ");
+
+    while (numero >=0){
+
+        scanf("%d", &numero);
+
+        if (numero >= 0 && numero <= 25)
+            a++;
+
+        else if (numero > 25 && numero <= 50)
+            b++;
+
+        else if (numero > 50 && numero <= 75)
+            c++;
+
+        else if (numero > 75 && numero <= 100)
+            d++;
+
+        else
+            d + 0;
+
+    }
+
+    printf("NUMEROS ENTRE 0 E 25: %d", a);
+    printf("\nNUMEROS ENTRE 26 E 50: %d", b);
+    printf("\nNUMEROS ENTRE 51 E 75: %d", c);
+    printf("\nNUMEROS ENTRE 76 E 100: %d", d);
+
+    return 0;
+}
