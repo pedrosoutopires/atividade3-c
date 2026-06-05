@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int fib(int n){
+
+    if (n <= 0) {
+        printf("Valor Invalido\n");
+        return 0;
+    }
+
+    int a = 0, b = 1, c, i = 1, soma = 0;
+
+    printf("Serie: ");
+
+    while (i <= n) {
+        if (i == 1) {
+            printf("%d", a);
+            soma += a;
+        }
+        else if (i == 2) {
+            printf(", %d", b);
+            soma += b;
+        }
+        else {
+            c = a + b;
+            printf(", %d", c);
+            soma += c;
+
+            a = b;
+            b = c;
+        }
+        i++;
+    }
+
+    printf("\n");
+    return soma;
+}
+
+int main(){
+    int x, resultado;
+
+    printf("Digite o numero de termos: ");
+    scanf("%d", &x);
+
+    resultado = fib(x);
+
+    printf("Soma dos termos: %d\n", resultado);
+
+    return 0;
+}
