@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int potencia(int x, int y) {
 
     int resultado = 1;
@@ -8,4 +10,18 @@ int potencia(int x, int y) {
     }
 
     return resultado;
+}
+
+int main(){
+
+    int a, b, total;
+
+    printf("Digite uma base e uma potencia: ");
+    scanf("%d%d", &a, &b);
+
+    total = potencia(a, b);
+
+    printf("%d", total);
+
+    return 0;
 }
