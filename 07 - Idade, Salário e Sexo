@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main(){
+
+    int idade;
+    float salario;
+    char sexo;
+
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+
+    while(idade < 0 || idade > 150){
+        printf("Idade invalida, digite novamente: ");
+        scanf("%d", &idade);
+    }
+
+    printf("Digite seu salario: R$");
+    scanf("%f", &salario);
+
+    while (salario <= 0){
+        printf("Salario invalido, digite novamente: R$");
+        scanf("%f", &salario);
+    }
+
+    printf("Digite seu sexo (m ou f): ");
+    scanf(" %c", &sexo);
+
+    while (sexo != 'm' && sexo != 'f'){
+        printf("Sexo invalido, digite novamente: ");
+        scanf(" %c", &sexo);
+    }
+
+    printf("A idade, salario e sexo sao, respectivamente: \n%d \nR$%.2f \n%c", idade, salario, sexo);
+
+    return 0;
+}
