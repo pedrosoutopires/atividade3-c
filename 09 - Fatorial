@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int fatorial(int numero){
+
+    int i = 1, resultado = 1;
+
+    while (i <= numero){
+        resultado = resultado * i;
+        i++;
+    }
+    return resultado;
+}
+
+int main(){
+
+    int x, y;
+
+    printf("Digite um numero: ");
+    scanf("%d", &x);
+
+    y = fatorial(x);
+
+    printf("O resultado e: %d", y);
+
+    return 0;
+}
