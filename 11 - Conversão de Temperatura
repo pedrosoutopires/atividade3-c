@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(){
+
+    int celsius = 0;
+    float fahrenheit;
+
+    while (celsius <= 100){
+        fahrenheit = (celsius * 9/5) + 32;
+        printf("Celsius e Fahrenheit: %d e %.2f \n", celsius, fahrenheit);
+        celsius = celsius + 5;
+    }
+
+    return 0;
+}
