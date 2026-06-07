@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main(){
+
+    int alunos = 0, aprovados = 0;
+    float nota = 0, notacumulada = 0, media;
+
+    printf("Digite a nota: ");
+
+    while (nota >= 0){
+
+        scanf("%f", &nota);
+
+        alunos++;
+
+        if (nota >= 7){
+            aprovados++;
+        }
+
+        if (nota >= 0){
+        notacumulada = notacumulada + nota;
+        media = notacumulada / alunos;
+        }
+    }
+
+    printf("O numeros de aprovados e: %d", aprovados);
+    printf("\nA media da turma e: %.2f", media);
+
+    return 0;
+}
