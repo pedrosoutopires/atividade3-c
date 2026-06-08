@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main(){
+
+    int opcao = 0;
+    float num1, num2, resultado;
+
+    while (opcao != 4){
+
+        printf("\nEscolha uma opcao \n1 - Somar \n2 - Subtrair \n3 - Multiplicar \n4 - Sair \n");
+        scanf("%d", &opcao);
+
+        switch (opcao){
+
+            case 1:
+                printf("Escolha 2 numeros: ");
+                scanf("%f%f", &num1, &num2);
+                resultado = num1 + num2;
+                printf("\n%.2f", resultado);
+                break;
+
+            case 2:
+                printf("Escolha 2 numeros: ");
+                scanf("%f%f", &num1, &num2);
+                resultado = num1 - num2;
+                printf("\n%.2f", resultado);
+                break;
+
+            case 3:
+                printf("Escolha 2 numeros: ");
+                scanf("%f%f", &num1, &num2);
+                resultado = num1 * num2;
+                printf("\n%.2f", resultado);
+                break;
+
+            default:
+                printf("Opcao invalida, escolha novamente: \n");
+            }
+    }
+    return 0;
+}
