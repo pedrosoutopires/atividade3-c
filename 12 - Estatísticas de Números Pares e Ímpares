@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(){
+
+    int numero, acumuladopar = 0, acumuladoimpar = 0, impares = 0, n, x = 1;
+    float media;
+
+    printf("Digite quantos numeros inteiros serao digitados: ");
+    scanf("%d", &n);
+
+    while (x <= n){
+
+       printf("Digite os numeros inteiros: ");
+       scanf("%d", &numero);
+
+        if (numero % 2 == 0){
+            acumuladopar = acumuladopar + numero;
+    }
+        else {
+            acumuladoimpar = acumuladoimpar + numero;
+            impares++;
+        }
+        x++;
+    }
+
+    media = acumuladoimpar / impares;
+
+    printf("A soma total de pares e: %d", acumuladopar);
+    printf("\nA media dos impares e: %.2f", media);
+
+    return 0;
+}
