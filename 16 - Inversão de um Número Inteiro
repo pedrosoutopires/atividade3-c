@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+void inverter(int numero){
+
+    int digito;
+
+    while (numero > 0){
+
+        digito = numero % 10;
+        printf("%d", digito);
+        numero = numero / 10;
+
+    }
+}
+
+int main(){
+
+    int numero;
+
+    printf("Digite o numero positivo e inteiro a ser invertido: ");
+    scanf("%d", &numero);
+
+    inverter(numero);
+
+    return 0;
+}
