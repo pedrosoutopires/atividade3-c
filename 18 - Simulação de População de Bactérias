@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(){
+
+    int horas = 0;
+    float coloniaA = 1000, coloniaB = 200;
+
+    while (coloniaA > coloniaB){
+
+        horas ++;
+
+        if (horas % 3 == 0){
+            coloniaA = coloniaA * 2;
+        }
+        if (horas % 4 == 0){
+            coloniaB = coloniaB * 3;
+        }
+    }
+
+    printf("A Colonia B ultrapassa a Colonia A em: %d horas", horas);
+
+    return 0;
+}
