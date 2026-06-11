@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int soma (int num){
+
+    int separador, somador = 0;
+
+    while (num > 0){
+        separador = num % 10;
+        somador +=separador;
+        num = num / 10;
+    }
+    return somador;
+}
+
+int main(){
+
+    int numero, resultado;
+
+    do {
+        printf("Digite um numero positivo e inteiro: ");
+        scanf("%d", &numero);
+    }
+    while (numero <= 0);
+
+    resultado = soma(numero);
+
+    printf("O resultado e: %d", resultado);
+
+    return 0;
+}
